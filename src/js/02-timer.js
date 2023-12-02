@@ -1,6 +1,6 @@
 // Описаний в документації
-import flatpickr from "flatpickr";
-import Notiflix from 'notiflix';
+import flatpickr from "../../node_modules/flatpickr/dist/typings.d.ts";
+import Notiflix from '../../node_modules/notiflix/index.d.ts';
 // Додатковий імпорт стилів
 import "flatpickr/dist/flatpickr.min.css";
 import { disableEl } from "./moduls/stylesElement";

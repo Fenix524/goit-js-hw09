@@ -1,4 +1,4 @@
-import { disableEl } from "./moduls/stylesElement";
+import { disableEl } from "./moduls/stylesElement.js";
 
 const bg = document.querySelector('body');
 const btnStart = document.querySelector('button[data-start]');
