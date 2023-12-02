@@ -1,5 +1,5 @@
 // Описаний в документації
-import flatpickr from "flatpickr";
+import flatpickr from "flatpickr/dist/flatpickr";
 import Notiflix from 'notiflix';
 // Додатковий імпорт стилів
 import "flatpickr/dist/flatpickr.min.css";
