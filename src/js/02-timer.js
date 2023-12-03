@@ -1,5 +1,5 @@
 // Описаний в документації
-import flatpickr from "flatpickr/dist/flatpickr";
+import flatpickr from "flatpickr";
 import Notiflix from 'notiflix';
 // Додатковий імпорт стилів
 import "flatpickr/dist/flatpickr.min.css";
@@ -10,10 +10,10 @@ import dateWork from "./moduls/dateWork";
 const startBtn = document.querySelector('button[data-start]');
 const myDatetimePicker = document.querySelector('#datetime-picker');
 
-const daysLabel = document.querySelector('.timer>.field>.value[data-days]');
-const hoursLabel = document.querySelector('.timer>.field>.value[data-hours]');
-const minutesLabel = document.querySelector('.timer>.field>.value[data-minutes]');
-const secondsLabel = document.querySelector('.timer>.field>.value[data-seconds]');
+const daysLabel = document.querySelector('.value[data-days]');
+const hoursLabel = document.querySelector('.value[data-hours]');
+const minutesLabel = document.querySelector('.value[data-minutes]');
+const secondsLabel = document.querySelector('.value[data-seconds]');
 
 
 let finalDate = null;
