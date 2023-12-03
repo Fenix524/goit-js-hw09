@@ -4,7 +4,7 @@ import Notiflix from 'notiflix';
 // Додатковий імпорт стилів
 import "flatpickr/dist/flatpickr.min.css";
 import { disableEl } from "./moduls/stylesElement";
-import dateWork from "./moduls/dateWork";
+import dateWork from "./moduls/dateWork.js";
 
 
 const startBtn = document.querySelector('button[data-start]');
