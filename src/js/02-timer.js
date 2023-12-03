@@ -4,8 +4,6 @@ import Notiflix from 'notiflix';
 // Додатковий імпорт стилів
 import "flatpickr/dist/flatpickr.min.css";
 import { disableEl } from "./moduls/stylesElement";
-import dateWork from "./moduls/dateWork.js";
-
 
 const startBtn = document.querySelector('button[data-start]');
 const myDatetimePicker = document.querySelector('#datetime-picker');
@@ -55,11 +53,30 @@ function onStartBtnClick(e) {
 
 function updateTimer(finalDate, thisDate) {
   if(finalDate >= thisDate){
-    const {days, hours, minutes, seconds} = dateWork.convertMsToObj(finalDate - thisDate)
+    const {days, hours, minutes, seconds} = convertMsToObj(finalDate - thisDate)
 
     daysLabel.textContent = days;
     hoursLabel.textContent = hours;
     minutesLabel.textContent = minutes;
     secondsLabel.textContent = seconds;
   }
+}
+
+function convertMsToObj(ms) {
+  // Number of milliseconds per unit of time
+  const second = 1000;
+  const minute = second * 60;
+  const hour = minute * 60;
+  const day = hour * 24;
+
+  // Remaining days
+  const days = Math.floor(ms / day);
+  // Remaining hours
+  const hours = Math.floor((ms % day) / hour);
+  // Remaining minutes
+  const minutes = Math.floor(((ms % day) % hour) / minute);
+  // Remaining seconds
+  const seconds = Math.floor((((ms % day) % hour) % minute) / second);
+
+  return { days, hours, minutes, seconds };
 }
